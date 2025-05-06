@@ -1,9 +1,19 @@
+
 variable "region" {
   description = "AWS region to create the VPC in"
   type        = string
   default     = ""
 }
 
+variable "project" {
+  description = "Project name for tagging resources"
+  type        = string
+  default     = ""
+}
+
+#---------
+# VPC VARS
+# --------
 variable "cidr_block" {
   description = "value of the CIDR block for the VPC"
   type        = string
@@ -13,7 +23,7 @@ variable "cidr_block" {
 variable "env" {
   description = "Name of the VPC environment"
   type        = string
-  default     = ""
+  default     = "staging"
 }
 
 variable "az_pri" {
@@ -29,7 +39,7 @@ variable "az_sec" {
 }
 
 variable "cidr_blocks" {
-  description = "List of CIDR blocks for security group ingress rules"
+  description = ""
   type        = list(string)
   default     = []
 }
