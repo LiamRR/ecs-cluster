@@ -12,3 +12,15 @@ az_pri = "eu-west-2a"
 az_sec = "eu-west-2b"
 # Allowed CIDR blocks for the security group
 cidr_blocks = ["81.101.229.40/32"]
+
+# -----------
+# Staging ECR
+# -----------
+# Main project name for staging env
+proj_name   = "lumon"
+mutability  = "MUTABLE"
+environment = "staging"
+# List of repos to be created for the project
+ecr_repositories = [
+  "frontend",
+]

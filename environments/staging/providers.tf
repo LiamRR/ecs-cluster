@@ -7,8 +7,8 @@ terraform {
   }
 
   backend "s3" {
-    bucket       = "lumon-staging"
-    key          = "state/terraform.tfstate"
+    bucket       = "project-lumon"
+    key          = "staging/terraform.tfstate"
     region       = "eu-west-2"
     encrypt      = true
     use_lockfile = true
